@@ -35,6 +35,7 @@ override.tf.json
 
 # Ignore secrets file
 secrets.tfvars
+*.auto.tfvars
 
 # Ignores pre-commit hooks and editorconfig
 .DS_Store
