@@ -1,0 +1,2 @@
+tfe_organization = "my-super-lab-organization"
+tfe_demo_users = ["user1@theirdomain.com", "user2@superfancyorg.org", "user3@work.works"]
