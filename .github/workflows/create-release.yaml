@@ -1,0 +1,23 @@
+name: Create release when tag is pushed
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: ncipollo/release-action@6c75be85e571768fa31b40abf38de58ba0397db5 # v1
+        with:
+          generateReleaseNotes: true
+          name: '${{ github.ref_name }}'
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
