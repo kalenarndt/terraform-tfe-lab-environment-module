@@ -5,7 +5,7 @@
       ":semanticCommits",
       ":enablePreCommit",
       ":disableRateLimiting",
-      "github>kalenarndt/renovate-module-templates",
+      "github>kalenarndt/renovate-config",
       "helpers:pinGitHubActionDigests"
     ],
     "terraform": {
